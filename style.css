@@ -1,0 +1,57 @@
+:root { color-scheme: dark; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, system-ui, Segoe UI, Roboto, Arial, sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+.wrap {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 18px;
+  text-align: center;
+}
+
+h1 { font-size: 22px; margin: 6px 0 14px; }
+
+.card-frame {
+  background: #222;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+
+#cardImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+button {
+  border: 0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#nextBtn { background: #2d6cff; color: white; }
+button.secondary { background: #444; color: white; }
+
+.small { margin-top: 10px; font-size: 12px; opacity: 0.8; }

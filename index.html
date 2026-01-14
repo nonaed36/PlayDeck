@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PlayDeck</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+
+  <!-- iOS / PWA -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#111111">
+</head>
+<body>
+  <main class="wrap">
+    <h1>PlayDeck</h1>
+
+    <div class="card-frame">
+      <img id="cardImage" alt="Card" />
+    </div>
+
+    <div class="caption" id="cardName"></div>
+
+    <div class="buttons">
+      <button id="nextBtn">Next Card</button>
+      <button id="resetBtn" class="secondary">Reshuffle</button>
+    </div>
+
+    <div class="small" id="deckInfo"></div>
+    <div class="small" id="statusInfo"></div>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./sw.js")
+        .then(() => {
+          document.getElementById("statusInfo").textContent =
+            "Offline ready after first load + Add to Home Screen.";
+        })
+        .catch(() => {});
+    }
+  </script>
+</body>
+</html>
